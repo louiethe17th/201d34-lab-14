@@ -1,12 +1,14 @@
 /* global Product, Cart */
-
 'use strict';
-
 // TODO: Create a "Cart" constructor (named Cart) that has item and quantity
 // properties, and builds an array of items as you create instances
-
-
-
+  
+var Cart = function (item, quantity) {
+  this.item = item;
+  this.quantity= quantity;
+  Cart.cartArray.push(this);
+}
+  Cart.cartArray = [];
 // Product Contructor
 var Product = function(filePath, name) {
   this.filePath = filePath;
@@ -14,7 +16,6 @@ var Product = function(filePath, name) {
   Product.allProducts.push(this);
 };
 Product.allProducts = [];
-
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');
   new Product('assets/banana.jpg', 'Banana');
@@ -37,6 +38,5 @@ function generateCatalog() {
   new Product('assets/water-can.jpg', 'Water Can');
   new Product('assets/wine-glass.jpg', 'Wine Glass');
 }
-
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
