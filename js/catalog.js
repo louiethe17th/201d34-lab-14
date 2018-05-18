@@ -51,8 +51,8 @@ function updateCartPreview() {
   var i = 0;
   var cartPreview = document.getElementById('cartContents')
   var cartH4 = document.createElement('h4')
-  cartH4.textContent = Cart.cartArray[i].itemsoo + Cart.cartArray[i].quantity
-  cartH4.appendChild(cartPreview);
+  cartH4.textContent = Cart.cartArray[i].item + Cart.cartArray[i].quantity
+  cartPreview.appendChild(cartH4);
   i++;
   // TODO: Get the item and quantity from the form
   // TODO: Add a new element to the cartContents div with that information
