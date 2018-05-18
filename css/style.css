@@ -50,7 +50,7 @@ nav li:hover{
 }
 
 body{
-    background-image: url(img/busbackground.jpg);
+    background-image: url(../assets/busbackground.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
